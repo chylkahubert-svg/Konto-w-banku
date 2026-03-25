@@ -1,6 +1,6 @@
 ﻿namespace Bank
 {
-    public class Class1
+    public class KontoPlus
     {
 
     }
