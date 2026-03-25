@@ -4,7 +4,7 @@ using System.Text;
 
 namespace Bank
 {
-    internal class Konto
+    public class Konto
     {
         private string klient;              //nazwa klienta
         private decimal bilans;             // aktualny stan środków
@@ -41,7 +41,7 @@ namespace Bank
         }
 
         //Metoda wpłaty
-        public void Wplata(decimal kwota)
+        public virtual void Wplata(decimal kwota)
         {
             if (zablokowane)
                 throw new InvalidOperationException("Konto jest zablokowane.");
@@ -50,10 +50,11 @@ namespace Bank
                 throw new ArgumentException("Kwota wpłaty musi być dodatnia.");
 
             bilans += kwota;
+            return;
         }
 
         // Metoda wypłaty
-        public void Wyplata(decimal kwota)
+        public virtual void Wyplata(decimal kwota)
         {
             if (zablokowane)
                 throw new InvalidOperationException("Konto jest zablokowane.");
@@ -65,6 +66,7 @@ namespace Bank
                 throw new InvalidOperationException("Brak wystarczających środków na koncie.");
 
             bilans -= kwota;
+            return;
         }
     }
 }
