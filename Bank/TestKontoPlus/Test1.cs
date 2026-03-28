@@ -71,6 +71,43 @@ namespace TestKontoPlus
             konto.Wyplata(10); // nie można już wypłacać
         }
 
+        [TestMethod]
+        public void Wyplata_ZaDuzo_Throw()
+        {
+            var konto = new KontoPlus("Hubert", 100, 50);
+
+            konto.Wyplata(200); // 100 + 50 < 200
+        }
+
+        [TestMethod]
+        public void UstawLimitDebetu_ZmnieniaLimit()
+        {
+            var konto = new KontoPlus("Hubert", 100, 50);
+
+            konto.UstawLimitDebetu(200);
+
+            Assert.AreEqual(300m, konto.DostepneSrodki);
+        }
+
+        [TestMethod]
+        public void UstawLimitDebetu_Ujemny_Throw()
+        {
+            var konto = new KontoPlus("Hubert", 100, 50);
+
+            konto.UstawLimitDebetu(-10);
+        }
+
+        [TestMethod]
+        public void Wyplata_GdyZablokowaneNieResetujDebetuJesliBilansNiePrzekraczaZera()
+        {
+            var konto = new KontoPlus("Hubert", 0, 100);
+
+            konto.Wyplata(50);  // debet, konto zablokowane
+
+            konto.Wyplata(40);  // bilans = -10 -> nadal zablokowane
+
+            konto.Wyplata(1);   // nadal nie można wypłacić
+        }
 
     }
 }
