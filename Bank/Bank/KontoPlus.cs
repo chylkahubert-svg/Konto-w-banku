@@ -18,7 +18,7 @@ namespace Bank
         }
 
         // Property zwracające środki dostępne dla klienta
-        public decimal DostępneSrodki
+        public decimal DostepneSrodki
         {
             get
             {
