@@ -31,7 +31,7 @@ namespace TestKontoPlus
 
             Assert.IsTrue(konto.Zablokowane);
 
-            konto.Wyplata(60);
+            konto.Wplata(60);
 
             Assert.AreEqual(10m, konto.Bilans);
             Assert.IsFalse(konto.Zablokowane);

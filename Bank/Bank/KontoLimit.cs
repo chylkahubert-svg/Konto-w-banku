@@ -4,7 +4,7 @@ using System.Text;
 
 namespace Bank
 {
-    internal class KontoLimit
+    public class KontoLimit
     {
         private Konto konto;            // delegowany obiekt Konto
         private decimal limitDebetu;    // jednorazowy limit debetowy
