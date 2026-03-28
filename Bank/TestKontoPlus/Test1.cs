@@ -104,7 +104,7 @@ namespace TestKontoPlus
 
             konto.Wyplata(50);  // debet, konto zablokowane
 
-            konto.Wyplata(40);  // bilans = -10 -> nadal zablokowane
+            konto.Wplata(40);  // bilans = -10 -> nadal zablokowane
 
             konto.Wyplata(1);   // nadal nie można wypłacić
         }
