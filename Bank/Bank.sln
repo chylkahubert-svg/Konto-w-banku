@@ -11,6 +11,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TestKontoLimit", "TestKonto
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TestKontoPlus", "TestKontoPlus\TestKontoPlus.csproj", "{9A498570-0C7B-4488-9767-D58BCEE254D9}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Program", "Program.cs\Program.csproj", "{037F8502-1887-4E24-8EC7-F03B9F95EB92}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -33,6 +35,10 @@ Global
 		{9A498570-0C7B-4488-9767-D58BCEE254D9}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{9A498570-0C7B-4488-9767-D58BCEE254D9}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{9A498570-0C7B-4488-9767-D58BCEE254D9}.Release|Any CPU.Build.0 = Release|Any CPU
+		{037F8502-1887-4E24-8EC7-F03B9F95EB92}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{037F8502-1887-4E24-8EC7-F03B9F95EB92}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{037F8502-1887-4E24-8EC7-F03B9F95EB92}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{037F8502-1887-4E24-8EC7-F03B9F95EB92}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
