@@ -43,12 +43,12 @@ namespace Bank
         //Metoda wpłaty
         public virtual void Wplata(decimal kwota)
         {
-            if (zablokowane)
-                throw new InvalidOperationException("Konto jest zablokowane.");
-
             if (kwota <= 0)
                 throw new ArgumentException("Kwota wpłaty musi być dodatnia.");
 
+            
+            //if (zablokowane)
+            //    throw new InvalidOperationException("Konto jest zablokowane.");
             bilans += kwota;
             return;
         }
